@@ -52,11 +52,11 @@
   ```
 
 ### 7. How much would it cost to buy one of each tool?
-- 467,488
+- 46,477
 
   ```
   cost_of_all = 0
-  Item.all.each { |item| cost_of_all += item.price }
+  Item.all.each { |item| cost_of_all += item.price if item.category.include?("Tool")}
   puts cost_of_all
   ```
 
